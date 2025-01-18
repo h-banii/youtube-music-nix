@@ -28,6 +28,7 @@ in
             "notifications"
             "picture-in-picture"
             "precise-volume"
+            "scrobbler"
           ]
       ))
       {
@@ -42,5 +43,6 @@ in
         navigation.enabled = mkEnableOption "Enable Navigation plugin";
         no-google-login = mkEnableOption "Enable No Google Login plugin";
         playback-speed = mkEnableOption "Enable Playback Speed plugin";
+        quality-changer = mkEnableOption "Enable Quality Changer plugin";
       };
 }
