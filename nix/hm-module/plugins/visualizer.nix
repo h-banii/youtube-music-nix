@@ -184,11 +184,17 @@ in
                 };
                 fillColor = mkOption {
                   default = null;
-                  type = nullOr (oneOf [ str waveColor ]);
+                  type = nullOr (oneOf [
+                    str
+                    waveColor
+                  ]);
                 };
                 lineColor = mkOption {
                   default = null;
-                  type = nullOr (oneOf [ str waveColor ]);
+                  type = nullOr (oneOf [
+                    str
+                    waveColor
+                  ]);
                 };
                 radius = mkOption {
                   default = null;
