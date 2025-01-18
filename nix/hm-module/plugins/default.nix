@@ -31,6 +31,7 @@ in
             "scrobbler"
             "shortcuts"
             "skip-silences"
+            "sponsorblock"
             "synced-lyrics"
             "video-toggle"
             "visualizer"

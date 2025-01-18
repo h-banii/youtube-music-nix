@@ -20,6 +20,6 @@ in
     in
     mkOption {
       default = categoryList;
-      type = types.listOf types.enum categoryList;
+      type = types.listOf (types.enum categoryList);
     };
 }
