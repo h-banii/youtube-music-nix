@@ -23,6 +23,7 @@ in
             "discord"
             "downloader"
             "equalizer"
+            "in-app-menu"
           ]
       ))
       {
@@ -32,10 +33,6 @@ in
         bypass-age-restrictions = mkEnableOption "Enable Bypass Age Restrictions";
         compact-sidebar.enabled = mkEnableOption "Enable Compact Sidebar";
         exponential-volume.enabled = mkEnableOption "Enable Exponential Volume plugin";
-        in-app-menu = {
-          enabled = mkEnableOption "Enable In-App Menu plugin";
-          hideDOMWindowControls = mkOption { default = false; };
-        };
         lumiastream.enabled = mkEnableOption "Enable Lumia Stream plugin";
         lyrics-genius = {
           enabled = mkEnableOption "Enable Lyrics Genius plugin";
