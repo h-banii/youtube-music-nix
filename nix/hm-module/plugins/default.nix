@@ -26,4 +26,5 @@ in
     enabled = mkEnableOption "Enable 'Disable Autoplay'";
     applyOnce = mkOption { default = false; };
   };
+  discord = import ./discord.nix { inherit lib; };
 }
