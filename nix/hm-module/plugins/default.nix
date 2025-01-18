@@ -19,6 +19,7 @@ in
             "api-server"
             "captions-selector"
             "crossfade"
+            "disable-autoplay"
             "discord"
             "downloader"
             "equalizer"
@@ -30,10 +31,6 @@ in
         blur-nav-bar = mkEnableOption "Enable Blur Navigation Bar";
         bypass-age-restrictions = mkEnableOption "Enable Bypass Age Restrictions";
         compact-sidebar.enabled = mkEnableOption "Enable Compact Sidebar";
-        disable-autoplay = {
-          enabled = mkEnableOption "Enable 'Disable Autoplay'";
-          applyOnce = mkOption { default = false; };
-        };
         exponential-volume.enabled = mkEnableOption "Enable Exponential Volume plugin";
         in-app-menu = {
           enabled = mkEnableOption "Enable In-App Menu plugin";
