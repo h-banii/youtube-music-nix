@@ -19,11 +19,11 @@ in
     enable = mkEnableOption "Enable YouTube Music";
     package = mkPackageOption pkgs "youtube-music" { };
     url = mkOption { default = "https://music.youtube.com"; };
-    plugins = import ./plugins { inherit lib; };
   };
 
   imports = [
     ./options.nix
+    ./plugins
   ];
 
   config = mkIf cfg.enable {
