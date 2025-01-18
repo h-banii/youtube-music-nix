@@ -3,7 +3,10 @@
 ## usage
 
 ```nix
-inputs.youtube-music.url = "github:h-banii/youtube-music-nix";
+inputs.youtube-music = {
+    url = "github:h-banii/youtube-music-nix";
+    inputs.nixpkgs.follows = "nixpkgs";
+};
 ```
 
 ```nix
