@@ -26,6 +26,7 @@ in
             "in-app-menu"
             "lyrics-genius"
             "notifications"
+            "picture-in-picture"
           ]
       ))
       {
