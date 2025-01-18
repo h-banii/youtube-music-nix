@@ -1,6 +1,6 @@
 { lib, ... }:
 let
-  inherit (lib) mkOption mkEnableOption mergeAttrs;
+  inherit (lib) mkEnableOption mergeAttrs;
   inherit (builtins) listToAttrs map;
 in
 {
@@ -24,6 +24,7 @@ in
             "downloader"
             "equalizer"
             "in-app-menu"
+            "lyrics-genius"
           ]
       ))
       {
@@ -34,10 +35,5 @@ in
         compact-sidebar.enabled = mkEnableOption "Enable Compact Sidebar";
         exponential-volume.enabled = mkEnableOption "Enable Exponential Volume plugin";
         lumiastream.enabled = mkEnableOption "Enable Lumia Stream plugin";
-        lyrics-genius = {
-          enabled = mkEnableOption "Enable Lyrics Genius plugin";
-          romanizedLyrics = mkOption { default = false; };
-        };
       };
-
 }
