@@ -32,6 +32,7 @@ in
             "shortcuts"
             "skip-silences"
             "synced-lyrics"
+            "video-toggle"
           ]
       ))
       {
