@@ -21,4 +21,9 @@ in
     lastCaptionsCode = mkOption { default = ""; };
   };
   compact-sidebar.enabled = mkEnableOption "Enable Compact Sidebar";
+  crossfade = import ./crossfade.nix { inherit lib; };
+  disable-autoplay = {
+    enabled = mkEnableOption "Enable 'Disable Autoplay'";
+    applyOnce = mkOption { default = false; };
+  };
 }
