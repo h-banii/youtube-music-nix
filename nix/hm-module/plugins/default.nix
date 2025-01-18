@@ -36,5 +36,9 @@ in
       hideDOMWindowControls = mkOption { default = false; };
     };
     lumiastream.enabled = mkEnableOption "Enable Lumia Stream plugin";
+    lyrics-genius = {
+      enabled = mkEnableOption "Enable Lyrics Genius plugin";
+      romanizedLyrics = mkOption { default = false; };
+    };
   };
 }
