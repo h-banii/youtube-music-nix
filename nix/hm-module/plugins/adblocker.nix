@@ -19,7 +19,7 @@ in
   };
   additionalBlockLists = mkOption {
     description = "Additional list of filters to use.";
-    type = types.listOf types.string;
+    type = types.listOf types.str;
     default = [ ];
   };
   disableDefaultLists = mkEnableOption "Disable the default blocklists.";
