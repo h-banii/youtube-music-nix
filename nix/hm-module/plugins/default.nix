@@ -29,5 +29,6 @@ in
     };
     discord = import ./discord.nix { inherit lib; };
     downloader = import ./downloader.nix { inherit lib; };
+    equalizer = import ./equalizer.nix { inherit lib; };
   };
 }
