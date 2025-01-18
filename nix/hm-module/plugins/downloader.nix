@@ -3,7 +3,7 @@ let
   inherit (lib) mkOption mkEnableOption types;
 in
 {
-  enabled = mkEnableOption "Enable Downloader plugin";
+  enabled = mkEnableOption "Whether to enable Downloader plugin";
   downloadFolder = mkOption {
     default = null;
     type = types.nullOr types.str;

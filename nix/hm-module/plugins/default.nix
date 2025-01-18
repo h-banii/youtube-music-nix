@@ -38,21 +38,21 @@ in
           ]
       ))
       {
-        album-actions.enabled = mkEnableOption "Enable Album Actions";
-        amuse.enabled = mkEnableOption "Enable Amuse";
-        blur-nav-bar = mkEnableOption "Enable Blur Navigation Bar";
-        bypass-age-restrictions = mkEnableOption "Enable Bypass Age Restrictions";
-        compact-sidebar.enabled = mkEnableOption "Enable Compact Sidebar";
-        exponential-volume.enabled = mkEnableOption "Enable Exponential Volume plugin";
-        lumiastream.enabled = mkEnableOption "Enable Lumia Stream plugin";
-        music-together.enabled = mkEnableOption "Enable Music Together plugin";
-        navigation.enabled = mkEnableOption "Enable Navigation plugin";
-        no-google-login = mkEnableOption "Enable No Google Login plugin";
-        playback-speed = mkEnableOption "Enable Playback Speed plugin";
-        quality-changer = mkEnableOption "Enable Quality Changer plugin";
-        skip-disliked-songs = mkEnableOption "Enable Skip Disliked Songs plugin";
-        taskbar-mediacontrol = mkEnableOption "Enable Taskbar Media Control plugin (Windows)";
-        touchbar = mkEnableOption "Enable TouchBar plugin";
-        tuna-obs = mkEnableOption "Enable Tuna OBS plugin";
+        album-actions.enabled = mkEnableOption "Whether to enable Album Actions plugin";
+        amuse.enabled = mkEnableOption "Whether to enable Amuse plugin";
+        blur-nav-bar = mkEnableOption "Whether to enable Blur Navigation Bar plugin";
+        bypass-age-restrictions = mkEnableOption "Whether to enable Bypass Age Restrictions plugin";
+        compact-sidebar.enabled = mkEnableOption "Whether to enable Compact Sidebar plugin";
+        exponential-volume.enabled = mkEnableOption "Whether to enable Exponential Volume plugin";
+        lumiastream.enabled = mkEnableOption "Whether to enable Lumia Stream plugin";
+        music-together.enabled = mkEnableOption "Whether to enable Music Together plugin";
+        navigation.enabled = mkEnableOption "Whether to enable Navigation plugin";
+        no-google-login = mkEnableOption "Whether to enable No Google Login plugin";
+        playback-speed = mkEnableOption "Whether to enable Playback Speed plugin";
+        quality-changer = mkEnableOption "Whether to enable Quality Changer plugin";
+        skip-disliked-songs = mkEnableOption "Whether to enable Skip Disliked Songs plugin";
+        taskbar-mediacontrol = mkEnableOption "Whether to enable Taskbar Media Control plugin (Windows)";
+        touchbar = mkEnableOption "Whether to enable TouchBar plugin";
+        tuna-obs = mkEnableOption "Whether to enable Tuna OBS plugin";
       };
 }

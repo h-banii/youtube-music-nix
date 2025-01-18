@@ -3,6 +3,6 @@ let
   inherit (lib) mkEnableOption mkOption;
 in
 {
-  enabled = mkEnableOption "Enable 'Disable Autoplay'";
+  enabled = mkEnableOption "Whether to enable 'Disable Autoplay' plugin";
   applyOnce = mkOption { default = false; };
 }

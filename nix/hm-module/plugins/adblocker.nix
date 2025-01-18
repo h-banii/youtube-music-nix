@@ -3,13 +3,13 @@ let
   inherit (lib) mkOption types mkEnableOption;
 in
 {
-  enabled = mkEnableOption "Enable Ad Blocker";
+  enabled = mkEnableOption "Whether to enable AdBlocker plugin";
   cache = mkOption {
-    description = "When enabled, the adblocker will cache the blocklists.";
+    description = "When enabled, the adblocker will cache the blocklists";
     default = true;
   };
   blocker = mkOption {
-    description = "Which adblocker to use.";
+    description = "Which adblocker to use";
     type = types.enum [
       "With blocklists"
       "In player"
@@ -18,9 +18,9 @@ in
     default = "In player";
   };
   additionalBlockLists = mkOption {
-    description = "Additional list of filters to use.";
+    description = "Additional list of filters to use";
     type = types.listOf types.str;
     default = [ ];
   };
-  disableDefaultLists = mkEnableOption "Disable the default blocklists.";
+  disableDefaultLists = mkEnableOption "Disable the default blocklists";
 }

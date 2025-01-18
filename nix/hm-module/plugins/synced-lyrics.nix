@@ -3,7 +3,7 @@ let
   inherit (lib) mkEnableOption mkOption types;
 in
 {
-  enabled = mkEnableOption "Enable Synced Lyrics plugin";
+  enabled = mkEnableOption "Whether to enable Synced Lyrics plugin";
   preciseTiming = mkOption {
     default = true;
   };

@@ -3,7 +3,7 @@ let
   inherit (lib) mkOption mkEnableOption types;
 in
 {
-  enabled = mkEnableOption "Enable Equalizer plugin";
+  enabled = mkEnableOption "Whether to enable Equalizer plugin";
   filters = mkOption {
     default = [ ];
     type =
@@ -24,6 +24,6 @@ in
       });
   };
   presets = {
-    bass-booster = mkEnableOption "Enable Equalizer's bass-booster preset";
+    bass-booster = mkEnableOption "Whether to enable Equalizer's bass-booster preset";
   };
 }

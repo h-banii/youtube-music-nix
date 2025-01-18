@@ -3,7 +3,7 @@ let
   inherit (lib) mkEnableOption mkOption types;
 in
 {
-  enabled = mkEnableOption "Enable Precise Volume plugin";
+  enabled = mkEnableOption "Whether to enable Precise Volume plugin";
   steps = mkOption {
     default = 1;
     description = "Percentage of volume to change";
@@ -11,7 +11,7 @@ in
   };
   arrowsShortcut = mkOption {
     default = true;
-    description = "Enable ArrowUp + ArrowDown local shortcuts";
+    description = "Whether to enable ArrowUp + ArrowDown local shortcuts";
   };
   globalShortcuts = {
     volumeUp = mkOption {

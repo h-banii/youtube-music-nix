@@ -3,7 +3,7 @@ let
   inherit (lib) mkEnableOption mkOption types;
 in
 {
-  enabled = mkEnableOption "Enable Visualizer plugin";
+  enabled = mkEnableOption "Whether to enable Visualizer plugin";
   type = mkOption {
     default = "butterchurn";
     type = types.enum [

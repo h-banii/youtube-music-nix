@@ -3,16 +3,14 @@ let
   inherit (lib) mkEnableOption mkOption types;
 in
 {
-  enabled = mkOption {
-    default = false;
-  };
+  enabled = mkEnableOption "Whether to enable Scrobbler plugin";
   scrobbleOtherMedia = mkOption {
     description = "Attempt to scrobble other video types (e.g. Podcasts, normal YouTube videos)";
     default = true;
   };
   scrobblers = {
     lastfm = {
-      enabled = mkEnableOption "Enable Last.fm scrobbling";
+      enabled = mkEnableOption "Whether to enable Last.fm scrobbling";
       token = mkOption {
         description = "Token used for authentication";
         default = null;
@@ -37,7 +35,7 @@ in
       };
     };
     listenbrainz = {
-      enabled = mkEnableOption "Enable ListenBrainz scrobbling";
+      enabled = mkEnableOption "Whether to enable ListenBrainz scrobbling";
       token = mkOption {
         default = null;
         type = types.nullOr types.str;

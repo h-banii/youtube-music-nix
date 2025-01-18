@@ -3,7 +3,7 @@ let
   inherit (lib) mkEnableOption mkOption types;
 in
 {
-  enabled = mkEnableOption "Enable Video Toggle plugin";
+  enabled = mkEnableOption "Whether to enable Video Toggle plugin";
   hideVideo = mkOption {
     default = false;
   };

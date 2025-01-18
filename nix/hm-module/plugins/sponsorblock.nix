@@ -3,7 +3,7 @@ let
   inherit (lib) mkEnableOption mkOption types;
 in
 {
-  enabled = mkEnableOption "Enable SponsorBlock plugin";
+  enabled = mkEnableOption "Whether to enable SponsorBlock plugin";
   apiURL = mkOption {
     default = "https://sponsor.ajay.app";
   };
