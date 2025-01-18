@@ -27,6 +27,7 @@ in
             "lyrics-genius"
             "notifications"
             "picture-in-picture"
+            "precise-volume"
           ]
       ))
       {
@@ -40,5 +41,6 @@ in
         music-together.enabled = mkEnableOption "Enable Music Together plugin";
         navigation.enabled = mkEnableOption "Enable Navigation plugin";
         no-google-login = mkEnableOption "Enable No Google Login plugin";
+        playback-speed = mkEnableOption "Enable Playback Speed plugin";
       };
 }
