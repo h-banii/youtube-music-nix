@@ -29,6 +29,7 @@ in
             "picture-in-picture"
             "precise-volume"
             "scrobbler"
+            "shortcuts"
           ]
       ))
       {
