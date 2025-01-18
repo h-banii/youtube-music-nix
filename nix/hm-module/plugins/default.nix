@@ -33,6 +33,7 @@ in
             "skip-silences"
             "synced-lyrics"
             "video-toggle"
+            "visualizer"
           ]
       ))
       {
