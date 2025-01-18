@@ -28,5 +28,6 @@ in
       applyOnce = mkOption { default = false; };
     };
     discord = import ./discord.nix { inherit lib; };
+    downloader = import ./downloader.nix { inherit lib; };
   };
 }
