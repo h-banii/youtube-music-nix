@@ -25,6 +25,7 @@ in
             "equalizer"
             "in-app-menu"
             "lyrics-genius"
+            "notifications"
           ]
       ))
       {
@@ -37,5 +38,6 @@ in
         lumiastream.enabled = mkEnableOption "Enable Lumia Stream plugin";
         music-together.enabled = mkEnableOption "Enable Music Together plugin";
         navigation.enabled = mkEnableOption "Enable Navigation plugin";
+        no-google-login = mkEnableOption "Enable No Google Login plugin";
       };
 }
