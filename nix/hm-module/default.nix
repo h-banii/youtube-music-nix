@@ -32,7 +32,7 @@ in
       let
         jsonOptions = builtins.toJSON (filterAttrs (n: v: v != null) cfg.options);
         jsonPlugins = builtins.toJSON cfg.plugins;
-        version = cfg.package.version;
+        version = "3.7.1";
       in
       ''
         {
