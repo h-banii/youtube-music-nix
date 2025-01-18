@@ -30,5 +30,11 @@ in
     discord = import ./discord.nix { inherit lib; };
     downloader = import ./downloader.nix { inherit lib; };
     equalizer = import ./equalizer.nix { inherit lib; };
+    exponential-volume.enabled = mkEnableOption "Enable Exponential Volume plugin";
+    in-app-menu = {
+      enabled = mkEnableOption "Enable In-App Menu plugin";
+      hideDOMWindowControls = mkOption { default = false; };
+    };
+    lumiastream.enabled = mkEnableOption "Enable Lumia Stream plugin";
   };
 }
