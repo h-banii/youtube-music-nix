@@ -10,4 +10,8 @@ in
     ratio = mkOption { default = 0.5; };
   };
   ambient-mode = import ./ambient-mode.nix { inherit lib; };
+  amuse.enabled = mkEnableOption "Enable Amuse";
+  api-server = import ./api-server.nix { inherit lib; };
+  blur-nav-bar = mkEnableOption "Enable Blur Navigation Bar";
+  bypass-age-restrictions = mkEnableOption "Enable Bypass Age Restrictions";
 }
