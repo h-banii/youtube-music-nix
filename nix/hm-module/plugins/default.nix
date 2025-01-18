@@ -30,6 +30,7 @@ in
             "precise-volume"
             "scrobbler"
             "shortcuts"
+            "skip-silences"
           ]
       ))
       {
@@ -45,5 +46,6 @@ in
         no-google-login = mkEnableOption "Enable No Google Login plugin";
         playback-speed = mkEnableOption "Enable Playback Speed plugin";
         quality-changer = mkEnableOption "Enable Quality Changer plugin";
+        skip-disliked-songs = mkEnableOption "Enable Skip Disliked Songs plugin";
       };
 }
