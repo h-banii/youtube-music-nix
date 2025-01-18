@@ -14,11 +14,6 @@ let
       };
     };
   };
-  defaultShortcutMapping = {
-    previous = "";
-    playPause = "";
-    next = "";
-  };
 in
 {
   enabled = mkEnableOption "Enable Shortcuts plugin";
@@ -26,11 +21,11 @@ in
     default = false;
   };
   global = mkOption {
-    default = defaultShortcutMapping;
+    default = { };
     type = shortcutMappingType;
   };
   local = mkOption {
-    default = defaultShortcutMapping;
+    default = { };
     type = shortcutMappingType;
   };
 }
