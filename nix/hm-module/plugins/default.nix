@@ -48,5 +48,8 @@ in
         playback-speed = mkEnableOption "Enable Playback Speed plugin";
         quality-changer = mkEnableOption "Enable Quality Changer plugin";
         skip-disliked-songs = mkEnableOption "Enable Skip Disliked Songs plugin";
+        taskbar-mediacontrol = mkEnableOption "Enable Taskbar Media Control plugin (Windows)";
+        touchbar = mkEnableOption "Enable TouchBar plugin";
+        tuna-obs = mkEnableOption "Enable Tuna OBS plugin";
       };
 }
