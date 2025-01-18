@@ -20,8 +20,11 @@ in
     package = mkPackageOption pkgs "youtube-music" { };
     url = mkOption { default = "https://music.youtube.com"; };
     plugins = import ./plugins { inherit lib; };
-    options = import ./options.nix { inherit lib; };
   };
+
+  imports = [
+    ./options.nix
+  ];
 
   config = mkIf cfg.enable {
     home.packages = [ cfg.package ];
