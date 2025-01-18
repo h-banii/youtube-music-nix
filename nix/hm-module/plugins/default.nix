@@ -35,5 +35,7 @@ in
         compact-sidebar.enabled = mkEnableOption "Enable Compact Sidebar";
         exponential-volume.enabled = mkEnableOption "Enable Exponential Volume plugin";
         lumiastream.enabled = mkEnableOption "Enable Lumia Stream plugin";
+        music-together.enabled = mkEnableOption "Enable Music Together plugin";
+        navigation.enabled = mkEnableOption "Enable Navigation plugin";
       };
 }
