@@ -5,7 +5,10 @@ in
 {
   enabled = mkEnableOption "Enable API-Server";
   hostname = mkOption { default = "0.0.0.0"; };
-  port = mkOption { default = 26538; };
+  port = mkOption {
+    default = 26538;
+    type = types.port;
+  };
   authStrategy = mkOption {
     type = types.enum [
       "AUTH_AT_FIRST"
