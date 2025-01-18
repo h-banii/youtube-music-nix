@@ -14,6 +14,7 @@ in
           })
           [
             "adblocker"
+            "album-color-theme"
             "ambient-mode"
             "api-server"
             "crossfade"
@@ -24,10 +25,6 @@ in
       ))
       {
         album-actions.enabled = mkEnableOption "Enable Album Actions";
-        album-color-theme = {
-          enabled = mkEnableOption "Enable Album Color Theme";
-          ratio = mkOption { default = 0.5; };
-        };
         amuse.enabled = mkEnableOption "Enable Amuse";
         blur-nav-bar = mkEnableOption "Enable Blur Navigation Bar";
         bypass-age-restrictions = mkEnableOption "Enable Bypass Age Restrictions";
