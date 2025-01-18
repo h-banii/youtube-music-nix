@@ -17,6 +17,7 @@ in
             "album-color-theme"
             "ambient-mode"
             "api-server"
+            "captions-selector"
             "crossfade"
             "discord"
             "downloader"
@@ -28,12 +29,6 @@ in
         amuse.enabled = mkEnableOption "Enable Amuse";
         blur-nav-bar = mkEnableOption "Enable Blur Navigation Bar";
         bypass-age-restrictions = mkEnableOption "Enable Bypass Age Restrictions";
-        captions-selector = {
-          enabled = mkEnableOption "Enable Captions Selector";
-          disableCaptions = mkOption { default = false; };
-          autoload = mkOption { default = false; };
-          lastCaptionsCode = mkOption { default = ""; };
-        };
         compact-sidebar.enabled = mkEnableOption "Enable Compact Sidebar";
         disable-autoplay = {
           enabled = mkEnableOption "Enable 'Disable Autoplay'";
