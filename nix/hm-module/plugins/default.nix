@@ -31,6 +31,7 @@ in
             "scrobbler"
             "shortcuts"
             "skip-silences"
+            "synced-lyrics"
           ]
       ))
       {
