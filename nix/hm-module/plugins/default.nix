@@ -14,4 +14,11 @@ in
   api-server = import ./api-server.nix { inherit lib; };
   blur-nav-bar = mkEnableOption "Enable Blur Navigation Bar";
   bypass-age-restrictions = mkEnableOption "Enable Bypass Age Restrictions";
+  captions-selector = {
+    enabled = mkEnableOption "Enable Captions Selector";
+    disableCaptions = mkOption { default = false; };
+    autoload = mkOption { default = false; };
+    lastCaptionsCode = mkOption { default = ""; };
+  };
+  compact-sidebar.enabled = mkEnableOption "Enable Compact Sidebar";
 }
