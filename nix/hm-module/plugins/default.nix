@@ -40,19 +40,19 @@ in
       {
         album-actions.enabled = mkEnableOption "Whether to enable Album Actions plugin";
         amuse.enabled = mkEnableOption "Whether to enable Amuse plugin";
-        blur-nav-bar = mkEnableOption "Whether to enable Blur Navigation Bar plugin";
-        bypass-age-restrictions = mkEnableOption "Whether to enable Bypass Age Restrictions plugin";
+        blur-nav-bar.enabled = mkEnableOption "Whether to enable Blur Navigation Bar plugin";
+        bypass-age-restrictions.enabled = mkEnableOption "Whether to enable Bypass Age Restrictions plugin";
         compact-sidebar.enabled = mkEnableOption "Whether to enable Compact Sidebar plugin";
         exponential-volume.enabled = mkEnableOption "Whether to enable Exponential Volume plugin";
         lumiastream.enabled = mkEnableOption "Whether to enable Lumia Stream plugin";
         music-together.enabled = mkEnableOption "Whether to enable Music Together plugin";
         navigation.enabled = mkEnableOption "Whether to enable Navigation plugin";
-        no-google-login = mkEnableOption "Whether to enable No Google Login plugin";
-        playback-speed = mkEnableOption "Whether to enable Playback Speed plugin";
-        quality-changer = mkEnableOption "Whether to enable Quality Changer plugin";
-        skip-disliked-songs = mkEnableOption "Whether to enable Skip Disliked Songs plugin";
-        taskbar-mediacontrol = mkEnableOption "Whether to enable Taskbar Media Control plugin (Windows)";
-        touchbar = mkEnableOption "Whether to enable TouchBar plugin";
-        tuna-obs = mkEnableOption "Whether to enable Tuna OBS plugin";
+        no-google-login.enabled = mkEnableOption "Whether to enable No Google Login plugin";
+        playback-speed.enabled = mkEnableOption "Whether to enable Playback Speed plugin";
+        quality-changer.enabled = mkEnableOption "Whether to enable Quality Changer plugin";
+        skip-disliked-songs.enabled = mkEnableOption "Whether to enable Skip Disliked Songs plugin";
+        taskbar-mediacontrol.enabled = mkEnableOption "Whether to enable Taskbar Media Control plugin (Windows)";
+        touchbar.enabled = mkEnableOption "Whether to enable TouchBar plugin";
+        tuna-obs.enabled = mkEnableOption "Whether to enable Tuna OBS plugin";
       };
 }
