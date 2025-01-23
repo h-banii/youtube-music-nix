@@ -19,6 +19,10 @@ in
     enable = mkEnableOption "Whether to enable YouTube Music";
     package = mkPackageOption pkgs "youtube-music" { };
     url = mkOption { default = "https://music.youtube.com"; };
+    version = mkOption {
+      description = "Version used in migrations";
+      default = "3.7.1";
+    };
   };
 
   imports = [
@@ -32,7 +36,6 @@ in
       let
         jsonOptions = builtins.toJSON (filterAttrs (n: v: v != null) cfg.options);
         jsonPlugins = builtins.toJSON cfg.plugins;
-        version = "3.7.1";
       in
       ''
         {
@@ -50,7 +53,7 @@ in
           "plugins": ${jsonPlugins},
           "__internal__": {
             "migrations": {
-              "version": "${version}"
+              "version": "${cfg.version}"
             }
           }
         }
