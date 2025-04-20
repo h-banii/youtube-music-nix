@@ -1,12 +1,19 @@
 {
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-  inputs.nixpkgs-master.url = "github:NixOS/nixpkgs/master";
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-master.url = "github:NixOS/nixpkgs/master";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
 
   outputs =
     {
       self,
       nixpkgs,
       nixpkgs-master,
+      home-manager,
       ...
     }:
     let
@@ -32,6 +39,7 @@
           inherit system;
           specialArgs = {
             inherit youtube-music;
+            inherit home-manager;
           };
           modules = [ ./nix/vm/default.nix ] ++ extraModules;
         };

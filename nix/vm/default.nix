@@ -15,6 +15,7 @@
 
   imports = [
     (modulesPath + "/profiles/minimal.nix")
+    ./home.nix
   ];
 
   users.users.nixos = {
@@ -35,33 +36,15 @@
   services.xserver.desktopManager.gnome.enable = true;
   services.xserver.desktopManager.xfce.enable = true;
   programs.ssh.askPassword = pkgs.lib.mkForce "${pkgs.kdePackages.ksshaskpass.out}/bin/ksshaskpass";
+  programs.hyprland.enable = true;
 
-  environment.systemPackages =
-    let
-      hypr-config = pkgs.writeText "hypr-config" ''
-        $mainMod = CTRL
-        bind = $mainMod, T, exec, kitty
-        bind = $mainMod, M, exec, youtube-music
-        bind = $mainMod, C, killactive
-      '';
-      hyprland = pkgs.writeShellScriptBin "hyprland" ''
-        Hyprland --config ${hypr-config}
-      '';
-    in
-    with pkgs;
-    [
-      kitty
-    ]
-    ++ [
-      (youtube-music.overrideAttrs (prevAttrs: {
-        patches = (prevAttrs.patches or [ ]) ++ [
-          ./mpris-desktop-entry.patch
-        ];
-      }))
-      hyprland
-    ];
-
-  # TODO: Use the home manager module
+  environment.systemPackages = [
+    (youtube-music.overrideAttrs (prevAttrs: {
+      patches = (prevAttrs.patches or [ ]) ++ [
+        ./mpris-desktop-entry.patch
+      ];
+    }))
+  ];
 
   system.stateVersion = "24.05";
 }
