@@ -1,7 +1,6 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-master.url = "github:NixOS/nixpkgs/master";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -12,7 +11,6 @@
     {
       self,
       nixpkgs,
-      nixpkgs-master,
       home-manager,
       ...
     }:
@@ -25,7 +23,7 @@
       vm =
         let
           default-system = self.lib.mkYtmSystem {
-            youtube-music = nixpkgs-master.legacyPackages.${system}.youtube-music;
+            youtube-music = nixpkgs.legacyPackages.${system}.youtube-music;
           };
         in
         default-system.config.system.build.vm;

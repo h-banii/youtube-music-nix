@@ -39,11 +39,7 @@
   programs.hyprland.enable = true;
 
   environment.systemPackages = [
-    (youtube-music.overrideAttrs (prevAttrs: {
-      patches = (prevAttrs.patches or [ ]) ++ [
-        ./mpris-desktop-entry.patch
-      ];
-    }))
+    youtube-music
   ];
 
   system.stateVersion = "24.05";
