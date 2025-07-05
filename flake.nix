@@ -20,13 +20,15 @@
     {
       homeManagerModules.default = ./nix/hm-module;
 
-      vm =
+      legacyPackages.${system} =
         let
           default-system = self.lib.mkYtmSystem {
             youtube-music = nixpkgs.legacyPackages.${system}.youtube-music;
           };
         in
-        default-system.config.system.build.vm;
+        {
+          vm = default-system.config.system.build.vm;
+        };
 
       lib.mkYtmSystem =
         {
