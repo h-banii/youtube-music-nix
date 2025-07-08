@@ -50,5 +50,7 @@
             modules = [ ./nix/vm/default.nix ] ++ extraModules;
           };
       };
+
+      formatter.${system} = pkgs.nixfmt-tree;
     };
 }
