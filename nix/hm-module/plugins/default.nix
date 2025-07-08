@@ -38,21 +38,21 @@ in
           ]
       ))
       {
-        album-actions.enabled = mkEnableOption "Whether to enable Album Actions plugin";
-        amuse.enabled = mkEnableOption "Whether to enable Amuse plugin";
-        blur-nav-bar.enabled = mkEnableOption "Whether to enable Blur Navigation Bar plugin";
-        bypass-age-restrictions.enabled = mkEnableOption "Whether to enable Bypass Age Restrictions plugin";
-        compact-sidebar.enabled = mkEnableOption "Whether to enable Compact Sidebar plugin";
-        exponential-volume.enabled = mkEnableOption "Whether to enable Exponential Volume plugin";
-        lumiastream.enabled = mkEnableOption "Whether to enable Lumia Stream plugin";
-        music-together.enabled = mkEnableOption "Whether to enable Music Together plugin";
-        navigation.enabled = mkEnableOption "Whether to enable Navigation plugin";
-        no-google-login.enabled = mkEnableOption "Whether to enable No Google Login plugin";
-        playback-speed.enabled = mkEnableOption "Whether to enable Playback Speed plugin";
-        quality-changer.enabled = mkEnableOption "Whether to enable Quality Changer plugin";
-        skip-disliked-songs.enabled = mkEnableOption "Whether to enable Skip Disliked Songs plugin";
-        taskbar-mediacontrol.enabled = mkEnableOption "Whether to enable Taskbar Media Control plugin (Windows)";
-        touchbar.enabled = mkEnableOption "Whether to enable TouchBar plugin";
-        tuna-obs.enabled = mkEnableOption "Whether to enable Tuna OBS plugin";
+        album-actions.enabled = mkEnableOption "Album Actions plugin";
+        amuse.enabled = mkEnableOption "Amuse plugin";
+        blur-nav-bar.enabled = mkEnableOption "Blur Navigation Bar plugin";
+        bypass-age-restrictions.enabled = mkEnableOption "Bypass Age Restrictions plugin";
+        compact-sidebar.enabled = mkEnableOption "Compact Sidebar plugin";
+        exponential-volume.enabled = mkEnableOption "Exponential Volume plugin";
+        lumiastream.enabled = mkEnableOption "Lumia Stream plugin";
+        music-together.enabled = mkEnableOption "Music Together plugin";
+        navigation.enabled = mkEnableOption "Navigation plugin";
+        no-google-login.enabled = mkEnableOption "No Google Login plugin";
+        playback-speed.enabled = mkEnableOption "Playback Speed plugin";
+        quality-changer.enabled = mkEnableOption "Quality Changer plugin";
+        skip-disliked-songs.enabled = mkEnableOption "Skip Disliked Songs plugin";
+        taskbar-mediacontrol.enabled = mkEnableOption "Taskbar Media Control plugin (Windows)";
+        touchbar.enabled = mkEnableOption "TouchBar plugin";
+        tuna-obs.enabled = mkEnableOption "Tuna OBS plugin";
       };
 }

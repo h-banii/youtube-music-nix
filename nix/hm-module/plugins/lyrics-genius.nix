@@ -3,6 +3,6 @@ let
   inherit (lib) mkEnableOption mkOption;
 in
 {
-  enabled = mkEnableOption "Whether to enable Lyrics Genius plugin";
+  enabled = mkEnableOption "Lyrics Genius plugin";
   romanizedLyrics = mkOption { default = false; };
 }

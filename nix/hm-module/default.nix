@@ -16,7 +16,7 @@ let
 in
 {
   options.programs.youtube-music = {
-    enable = mkEnableOption "Whether to enable YouTube Music";
+    enable = mkEnableOption "YouTube Music";
     package = mkPackageOption pkgs "youtube-music" { };
     url = mkOption { default = "https://music.youtube.com"; };
     version = mkOption {

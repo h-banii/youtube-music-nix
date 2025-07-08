@@ -16,7 +16,7 @@ let
   };
 in
 {
-  enabled = mkEnableOption "Whether to enable Shortcuts plugin";
+  enabled = mkEnableOption "Shortcuts plugin";
   overrideMediaKeys = mkOption {
     default = false;
   };

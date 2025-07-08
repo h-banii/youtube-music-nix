@@ -3,7 +3,7 @@ let
   inherit (lib) mkOption mkEnableOption types;
 in
 {
-  enabled = mkEnableOption "Whether to enable API Server plugin";
+  enabled = mkEnableOption "API Server plugin";
   hostname = mkOption { default = "0.0.0.0"; };
   port = mkOption {
     default = 26538;

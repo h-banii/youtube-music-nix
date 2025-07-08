@@ -3,7 +3,7 @@ let
   inherit (lib) mkOption mkEnableOption;
 in
 {
-  enabled = mkEnableOption "Whether to enable Discord Rich Presence plugin";
+  enabled = mkEnableOption "Discord Rich Presence plugin";
   autoReconnect = mkOption {
     description = "If enabled, will try to reconnect to discord every 5 seconds after disconnecting or failing to connect";
     default = true;
