@@ -16,6 +16,8 @@
     }:
     let
       system = "x86_64-linux";
+      inherit (nixpkgs) lib;
+      pkgs = nixpkgs.legacyPackages.${system};
     in
     {
       homeManagerModules.default = ./nix/hm-module;
@@ -27,6 +29,27 @@
           };
         in
         {
+          homeManagerOptionsDoc =
+            let
+              eval = lib.evalModules {
+                modules = [
+                  {
+                    options._module.args = lib.mkOption {
+                      internal = true;
+                    };
+                    config = {
+                      _module.check = false;
+                    };
+                  }
+                  self.homeManagerModules.default
+                ];
+              };
+            in
+            pkgs.nixosOptionsDoc {
+              # TODO: Fix warnings... (add missing descriptions to ALL options)
+              warningsAreErrors = false;
+              inherit (eval) options;
+            };
           vm = default-system.config.system.build.vm;
         };
 
