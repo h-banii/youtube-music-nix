@@ -16,7 +16,6 @@
     }:
     let
       system = "x86_64-linux";
-      inherit (nixpkgs) lib;
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
@@ -29,33 +28,14 @@
           };
         in
         {
-          homeManagerOptionsDoc = self.lib.mkOptionsDoc self.homeManagerModules.default;
+          homeManagerOptionsDoc = self.lib.mkOptionsDoc {
+            module = self.homeManagerModules.default;
+          };
           vm = default-system.config.system.build.vm;
         };
 
       lib = {
-        mkOptionsDoc =
-          module:
-          let
-            eval = lib.evalModules {
-              modules = [
-                {
-                  options._module.args = lib.mkOption {
-                    internal = true;
-                  };
-                  config = {
-                    _module.check = false;
-                  };
-                }
-                module
-              ];
-            };
-          in
-          pkgs.nixosOptionsDoc {
-            # TODO: Fix warnings... (add missing descriptions to ALL options)
-            warningsAreErrors = false;
-            inherit (eval) options;
-          };
+        mkOptionsDoc = { module }: pkgs.callPackage ./nix/packages/options-doc.nix { inherit module; };
         mkYtmSystem =
           {
             youtube-music,
