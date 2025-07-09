@@ -1,5 +1,7 @@
 # youtube-music-nix
 
+Documentation: https://h-banii.github.io/youtube-music-nix/
+
 ## Home Manager Module
 
 ```nix
