@@ -66,19 +66,9 @@ in
     ];
   };
   opacity = mkOption {
-    default = 1;
-    type = types.enum [
-      0.1
-      0.2
-      0.3
-      0.4
-      0.5
-      0.6
-      0.7
-      0.8
-      0.9
-      1
-    ];
+    description = "Value between 0.0 and 1.0";
+    default = 1.0;
+    type = types.float;
   };
   fullscreen = mkOption { default = false; };
 }
