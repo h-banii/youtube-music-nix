@@ -1,0 +1,22 @@
+{
+  "name": "youtube-music-nix-docs",
+  "version": "1.0.0",
+  "description": "Documentation for the youtube-music Home Manager module",
+  "main": " ",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview",
+    "format:js": "prettier . --write",
+    "lint:md": "markdownlint-cli2 ./src/**/*.md --fix",
+    "fmt": "npm run format:js && npm run lint:md"
+  },
+  "author": "h-banii",
+  "license": "MIT",
+  "devDependencies": {
+    "markdownlint-cli2": "~0.18.1",
+    "prettier": "~3.6.2",
+    "vitepress": "~1.6.3",
+    "vue": "~3.5.17"
+  }
+}
