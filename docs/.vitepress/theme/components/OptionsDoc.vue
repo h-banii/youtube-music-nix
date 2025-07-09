@@ -17,16 +17,20 @@
         </div>
         <div :class="$style['option-meta-name']">Type</div>
         <div :class="$style['option-meta-value']" v-html="value.type"></div>
-        <div :class="$style['option-meta-name']">Default</div>
-        <div :class="$style['option-meta-value']">
+        <div :class="$style['option-meta-name']" v-if="!!value.default">
+          Default
+        </div>
+        <div :class="$style['option-meta-value']" v-if="!!value.default">
           <code v-html="value.default.text"></code>
         </div>
-        <div :class="$style['option-meta-name']" v-if="!!value.example">Example</div>
+        <div :class="$style['option-meta-name']" v-if="!!value.example">
+          Example
+        </div>
         <div :class="$style['option-meta-value']" v-if="!!value.example">
           <div v-if="value.example.text.includes('\n')" class="language-nix">
             <pre><code v-html="value.example.text"></code></pre>
           </div>
-          <code v-else v-html="value.default.text"></code>
+          <code v-else v-html="value.example.text"></code>
         </div>
       </div>
     </div>
