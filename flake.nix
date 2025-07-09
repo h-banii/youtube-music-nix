@@ -5,6 +5,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    docs.url = "path:docs";
   };
 
   outputs =
@@ -12,6 +13,7 @@
       self,
       nixpkgs,
       home-manager,
+      docs,
       ...
     }:
     let
@@ -20,6 +22,25 @@
     in
     {
       homeManagerModules.default = ./nix/hm-module;
+
+      packages.${system} =
+        let
+          homeManagerOptionsJSON = self.legacyPackages.${system}.homeManagerOptionsDoc.optionsJSON;
+        in
+        {
+          docs = pkgs.symlinkJoin {
+            name = "youtube-music-nix-docs";
+            paths = [
+              docs.packages.${system}.default
+              (pkgs.linkFarm "youtube-music-nix-hm-options" [
+                {
+                  name = "home-manager-options.json";
+                  path = "${homeManagerOptionsJSON}/share/doc/nixos/options.json";
+                }
+              ])
+            ];
+          };
+        };
 
       legacyPackages.${system} =
         let
