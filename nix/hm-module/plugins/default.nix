@@ -55,5 +55,6 @@ in
         touchbar.enabled = mkEnableOption "TouchBar plugin";
         tuna-obs.enabled = mkEnableOption "Tuna OBS plugin";
         unobtrusive-player.enabled = mkEnableOption "Unobtrusive Player plugin";
+        performance-improvement.enabled = mkEnableOption "Performance Improvement plugin";
       };
 }
