@@ -25,4 +25,7 @@ in
       "focus"
     ];
   };
+  romanization = mkEnableOption "romanized lyrics" // {
+    default = true;
+  };
 }
