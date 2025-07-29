@@ -54,5 +54,6 @@ in
         taskbar-mediacontrol.enabled = mkEnableOption "Taskbar Media Control plugin (Windows)";
         touchbar.enabled = mkEnableOption "TouchBar plugin";
         tuna-obs.enabled = mkEnableOption "Tuna OBS plugin";
+        unobtrusive-player.enabled = mkEnableOption "Unobtrusive Player plugin";
       };
 }
