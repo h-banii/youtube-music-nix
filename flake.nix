@@ -5,7 +5,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    docs.url = "path:docs";
+    docs = {
+      url = "path:docs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
