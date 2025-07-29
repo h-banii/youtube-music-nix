@@ -8,6 +8,9 @@ in
     description = "Attempt to scrobble other video types (e.g. Podcasts, normal YouTube videos)";
     default = true;
   };
+  alternativeTitles = mkEnableOption "" // {
+    description = "Whether to use alternative titles for scrobbling (Useful for non-roman song titles)";
+  };
   scrobblers = {
     lastfm = {
       enabled = mkEnableOption "Last.fm scrobbling";
