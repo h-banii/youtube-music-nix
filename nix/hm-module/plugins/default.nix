@@ -17,6 +17,7 @@ in
             "album-color-theme"
             "ambient-mode"
             "api-server"
+            "auth-proxy-adapter"
             "captions-selector"
             "crossfade"
             "disable-autoplay"
