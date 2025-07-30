@@ -19,11 +19,14 @@
     {
       homeManagerModules.default = ./nix/hm-module;
 
-      packages.${system} =
+      legacyPackages.${system} =
         let
           homeManagerOptionsJSON = self.legacyPackages.${system}.homeManagerOptionsDoc.optionsJSON;
         in
         {
+          homeManagerOptionsDoc = self.lib.mkOptionsDoc {
+            module = self.homeManagerModules.default;
+          };
           docs = pkgs.symlinkJoin {
             name = "youtube-music-nix-docs";
             paths = [
@@ -37,12 +40,6 @@
             ];
           };
         };
-
-      legacyPackages.${system} = {
-        homeManagerOptionsDoc = self.lib.mkOptionsDoc {
-          module = self.homeManagerModules.default;
-        };
-      };
 
       lib = {
         mkOptionsDoc = { module }: pkgs.callPackage ./nix/packages/options-doc.nix { inherit module; };
