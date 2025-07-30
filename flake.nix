@@ -1,17 +1,10 @@
 {
-  inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-  };
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
   outputs =
     {
       self,
       nixpkgs,
-      home-manager,
       systems,
       ...
     }:
@@ -45,34 +38,14 @@
           };
         };
 
-      legacyPackages.${system} =
-        let
-          default-system = self.lib.mkYtmSystem {
-            youtube-music = nixpkgs.legacyPackages.${system}.youtube-music;
-          };
-        in
-        {
-          homeManagerOptionsDoc = self.lib.mkOptionsDoc {
-            module = self.homeManagerModules.default;
-          };
-          vm = default-system.config.system.build.vm;
+      legacyPackages.${system} = {
+        homeManagerOptionsDoc = self.lib.mkOptionsDoc {
+          module = self.homeManagerModules.default;
         };
+      };
 
       lib = {
         mkOptionsDoc = { module }: pkgs.callPackage ./nix/packages/options-doc.nix { inherit module; };
-        mkYtmSystem =
-          {
-            youtube-music,
-            extraModules ? [ ],
-          }:
-          nixpkgs.lib.nixosSystem {
-            inherit system;
-            specialArgs = {
-              inherit youtube-music;
-              inherit home-manager;
-            };
-            modules = [ ./nix/vm/default.nix ] ++ extraModules;
-          };
       };
 
       formatter.${system} = pkgs.nixfmt-tree;
