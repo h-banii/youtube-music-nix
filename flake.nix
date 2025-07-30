@@ -5,10 +5,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    docs = {
-      url = "path:docs";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
@@ -16,12 +12,16 @@
       self,
       nixpkgs,
       home-manager,
-      docs,
+      systems,
       ...
     }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+      docs = (import ./docs/flake.nix).outputs {
+        inherit nixpkgs;
+        inherit systems;
+      };
     in
     {
       homeManagerModules.default = ./nix/hm-module;
