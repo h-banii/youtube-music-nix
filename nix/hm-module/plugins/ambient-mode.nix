@@ -68,7 +68,7 @@ in
   opacity = mkOption {
     description = "Value between 0.0 and 1.0";
     default = 1.0;
-    type = types.float;
+    type = types.numbers.between 0 1;
   };
   fullscreen = mkOption { default = false; };
 }
