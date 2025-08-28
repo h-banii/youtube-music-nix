@@ -136,5 +136,15 @@ in
       default = [ ];
       type = types.listOf types.path;
     };
+    customWindowTitle = mkOption {
+      description = ''
+        Set window title to this value instead of dynamically changing it to
+        the current song's name.
+
+        See https://github.com/th-ch/youtube-music/pull/3656
+      '';
+      default = null;
+      type = types.nullOr types.str;
+    };
   };
 }
